@@ -1,0 +1,64 @@
+name: language
+services:
+  language_db:
+    image: postgres:16
+    env_file:
+      - .env
+    environment:
+      - POSTGRES_USER=${POSTGRES_USER}
+      - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
+      - POSTGRES_DB=${POSTGRES_DB}
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    networks:
+      - language_net
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres -d myticketflow"]
+      interval: 5s
+      timeout: 5s
+      retries: 20
+
+  pgadmin:
+    image: dpage/pgadmin4
+    env_file:
+      - .env
+    environment:
+      - PGADMIN_DEFAULT_EMAIL=${PGADMIN_DEFAULT_EMAIL}
+      - PGADMIN_DEFAULT_PASSWORD=${PGADMIN_DEFAULT_PASSWORD}
+    ports:
+      - "5050:80"
+    depends_on:
+      language_db:
+        condition: service_healthy
+    volumes:
+      - pgadmin_data:/var/lib/pgadmin
+    networks:
+      - language_net
+
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    env_file:
+      - .env
+    environment:
+      - ENVIRONMENT=local
+      - POSTGRES_HOST=language_db
+    ports:
+      - "8000:8000"
+    depends_on:
+      language_db:
+        condition: service_healthy
+    volumes:
+      - .:/app
+    networks:
+      - language_net
+
+networks:
+  language_net:
+
+volumes:
+  postgres_data:
+  pgadmin_data:
