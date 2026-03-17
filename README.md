@@ -12,9 +12,7 @@
 
 ---
 
-<p align="center">
   ![banner](https://raw.githubusercontent.com/LuisOctavioGSeror/MyIdeasBackend/main/docs/banner.png)
-</p>
 
 ---
 
