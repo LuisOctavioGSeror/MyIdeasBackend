@@ -189,16 +189,6 @@ Users can think, iterate, and refine ideas before saving them — a process clos
 
 ---
 
-## Future Improvements
-
-- Frontend integration  
-- Idea categorization  
-- Collaboration  
-- AI suggestions  
-- Versioning system  
-
----
-
 ## License
 
 Open-source for study and experimentation.
