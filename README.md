@@ -13,7 +13,7 @@
 ---
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/LuisOctavioGSeror/MyIdeasBackend/main/docs/banner.png" width="900">
+  ![banner](https://raw.githubusercontent.com/LuisOctavioGSeror/MyIdeasBackend/main/docs/banner.png)
 </p>
 
 ---
