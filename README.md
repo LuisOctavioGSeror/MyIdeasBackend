@@ -29,7 +29,7 @@ Instead of simply storing ideas, the system enables users to interact with an AI
 ## Demo (Chat + Idea Creation)
 
 <p align="center">
-  <img src="docs/demo.gif" width="900">
+  <img src="https://raw.githubusercontent.com/LuisOctavioGSeror/MyIdeasBackend/main/docs/demo.gif" width="900">
 </p>
 
 ---
@@ -61,17 +61,17 @@ Instead of simply storing ideas, the system enables users to interact with an AI
 
 ### API Documentation
 <p align="center">
-  <img src="docs/swagger.png" width="800">
+  <img src="https://raw.githubusercontent.com/LuisOctavioGSeror/MyIdeasBackend/main/docs/swagger.png" width="800">
 </p>
 
 ### Chat System
 <p align="center">
-  <img src="docs/chat.png" width="800">
+  <img src="https://raw.githubusercontent.com/LuisOctavioGSeror/MyIdeasBackend/main/docs/chat.png" width="800">
 </p>
 
 ### Ideas Management
 <p align="center">
-  <img src="docs/ideas.png" width="800">
+  <img src="https://raw.githubusercontent.com/LuisOctavioGSeror/MyIdeasBackend/main/docs/ideas.png" width="800">
 </p>
 
 ---
